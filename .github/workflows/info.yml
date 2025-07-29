@@ -1,0 +1,28 @@
+name: Dosya Bilgileri ve Kontrol
+
+on:
+  push:
+    branches:
+      - main  # veya "master" hangisini kullanıyorsan
+
+jobs:
+  file-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reposu klonla
+        uses: actions/checkout@v4
+
+      - name: Dosyaları listele
+        run: ls -la
+
+      - name: README.md dosyası var mı?
+        run: |
+          if [ -f README.md ]; then
+            echo "README.md mevcut ✅"
+          else
+            echo "README.md eksik ❌"
+            exit 1
+          fi
+
+      - name: Tarihi yazdır
+        run: date
