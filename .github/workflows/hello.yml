@@ -1,0 +1,10 @@
+name: İlk Workflow
+
+on: [push]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mesaj yaz
+        run: echo "Merhaba GitHub Actions!"
