@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mesaj yaz
-        run: echo "Merhaba GitHub Actions!"
+        run: echo "Merhaba GitHub Actions, nasılsın."
